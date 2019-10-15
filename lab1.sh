@@ -17,18 +17,18 @@ fi
 clean=$(basename "$i")
 filename=${clean%.*}
 
-type=$(file —mime-type -b "$i")
+type=$(file --mime-type -b "$i")
 
-mod=$(stat —format=%y "$i")
+mod=$(stat --format=%y "$i")
 
-size=$(stat —format=%s "$i")
+size=$(stat --format=%s "$i")
 
-dur=$(mediainfo "$i" —Output="General;%Duration/String%")
+dur=$(mediainfo "$i" --Output="General;%Duration/String%")
 
 echo "$filename;$type;$mod;$size;$dur"
 
 done
-)»$folder/result.xls
+)>>$folder/result.xls
 
 }
 
