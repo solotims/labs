@@ -19,7 +19,7 @@ filename=${clean%.*}
 
 type=$(file --mime-type -b "$i")
 
-mod=$(stat --format=%.10y ~/1/one.jpg)
+mod=$(stat --format=%.10y "$i")
 
 size=$(stat --format=%s "$i")
 
